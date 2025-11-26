@@ -6,130 +6,137 @@
     <title>Volunteer Dashboard</title>
 
     <style>
- body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Orbitron', 'Segoe UI', sans-serif;
-            background: #0b0c17;
-            color: #e0e0e0;
-        }
-        
-        .navbar {
-            background: #0d1b2a; 
-            color: #e0e0e0;
-            padding: 20px;
-            font-size: 28px;
-            font-weight: 700;
-            text-align: center;
-            letter-spacing: 1px;
-            border-bottom: 2px solid #1f4068;
-        }
-        
-        .container {
-            padding: 20px;
-            display: grid;
-            gap: 20px;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        }
-        
-        .card {
-            background: #1f2a44;
-            padding: 18px;
-            border-radius: 6px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-            transition: 0.3s;
-            border-left: 4px solid #1f4068;
-        }
-        
-        .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
-        }
-        
-        .card h3 {
-            margin-top: 0;
-            font-size: 20px;
-            color: #a8dadc;
-            text-transform: uppercase;
-        }
-        
-        .card p {
-            font-size: 14px;
-            color: #cfd8dc;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 8px 12px;
-            background: #1f4068; 
-            color: #e0e0e0;
-            border-radius: 4px;
-            margin-top: 10px;
-            text-decoration: none;
-            cursor: pointer;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-        
-        .btn:hover {
-            background: #3a5f8a;
-            box-shadow: 0 0 10px #3a5f8a;
-        }
-        
-        .backdrop {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.75);
-            z-index: 900;
-        }
-        
-        .info-card {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 380px;
-            max-width: 90%;
-            background: #1f2a44;
-            padding: 20px;
-            border-radius: 6px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.9);
-            z-index: 1000;
-            border-top: 4px solid #1f4068;
-        }
-        
-        .info-card h3 {
-            margin-top: 0;
-            font-size: 20px;
-            color: #a8dadc;
-            text-transform: uppercase;
-        }
-        
-        .info-card p {
-            margin: 6px 0;
-            font-size: 14px;
-            color: #cfd8dc;
-        }
-        
-                
-        #info1:checked ~ #popup1,
-        #info2:checked ~ #popup2,
-        #info3:checked ~ #popup3,
-        #info4:checked ~ #popup4 {
-            display: block;
-        }
-
-        #info1:checked ~ #backdrop1,
-        #info2:checked ~ #backdrop2,
-        #info3:checked ~ #backdrop3,
-        #info4:checked ~ #backdrop4 {
-            display: block;
-        }
-    </style>
-</head>
-<body>
+             body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Orbitron', 'Segoe UI', sans-serif;
+                background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+                color: #e0e0e0;
+            }
+            
+            /* Navbar */
+            .navbar {
+                background: #1f0f3d; /* dark purple/navy */
+                color: #ffffff;
+                padding: 20px;
+                font-size: 28px;
+                font-weight: 700;
+                text-align: center;
+                letter-spacing: 1px;
+                border-bottom: 3px solid #8e44ad; /* neon accent */
+            }
+            
+            /* Container & Cards */
+            .container {
+                padding: 20px;
+                display: grid;
+                gap: 20px;
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            }
+            
+            .card {
+                background: #1a1a2e; /* dark panel */
+                padding: 18px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(142, 68, 173, 0.6);
+                transition: 0.3s;
+                border-left: 4px solid #8e44ad; /* neon purple stripe */
+            }
+            
+            .card:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 0 20px rgba(142, 68, 173, 0.8), 0 0 30px rgba(52, 152, 219, 0.5);
+            }
+            
+            .card h3 {
+                margin-top: 0;
+                font-size: 20px;
+                color: #9b59b6; /* neon purple */
+                text-transform: uppercase;
+            }
+            
+            .card p {
+                font-size: 14px;
+                color: #c0c0ff;
+            }
+            
+            /* Buttons */
+            .btn {
+                display: inline-block;
+                padding: 8px 14px;
+                background: #2980b9; /* neon blue */
+                color: #fff;
+                border-radius: 6px;
+                margin-top: 10px;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 14px;
+                transition: 0.3s;
+                box-shadow: 0 0 5px #2980b9, 0 0 10px #8e44ad;
+            }
+            
+            .btn:hover {
+                background: #8e44ad;
+                box-shadow: 0 0 10px #8e44ad, 0 0 20px #2980b9;
+            }
+            
+            /* Backdrop */
+            .backdrop {
+                display: none;
+                position: fixed;
+                inset: 0;
+                background: rgba(0,0,0,0.85);
+                z-index: 900;
+            }
+            
+            /* Info Card */
+            .info-card {
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 380px;
+                max-width: 90%;
+                background: #1a1a2e;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 30px rgba(142, 68, 173, 0.8), 0 0 50px rgba(52, 152, 219, 0.5);
+                z-index: 1000;
+                border-top: 4px solid #8e44ad;
+            }
+            
+            .info-card h3 {
+                margin-top: 0;
+                font-size: 20px;
+                color: #9b59b6;
+                text-transform: uppercase;
+            }
+            
+            .info-card p {
+                margin: 6px 0;
+                font-size: 14px;
+                color: #c0c0ff;
+            }
+            
+            /* Popup Logic */
+            #info1:checked ~ #popup1,
+            #info2:checked ~ #popup2,
+            #info3:checked ~ #popup3,
+            #info4:checked ~ #popup4 {
+                display: block;
+            }
+            
+            #info1:checked ~ #backdrop1,
+            #info2:checked ~ #backdrop2,
+            #info3:checked ~ #backdrop3,
+            #info4:checked ~ #backdrop4 {
+                display: block;
+            }
+            
+                </style>
+            </head>
+            <body>
 
     <div class="navbar">Volunteer Opportunities Dashboard</div>
 
