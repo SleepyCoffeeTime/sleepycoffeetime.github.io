@@ -1,128 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Volunteer Opportunities</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dior at The Met</title>
   <style>
-    body {
-      font-family: sans-serif;
+    :root {
+      --dior-pink: #d5dcf6;
+      --dior-dark: #1a1a1a;
+      --dior-white: #fcfaff;
+      --dior-rose: #6b7aa8;
+    }
+ body {
+      font-family: 'Georgia', serif;
+      background: var(--dior-white);
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      color: var(--dior-rose);
+      height: 100%;
+      width: 100%;
     }
-
     header {
-      background-color: #333;
-      color: white;
-      padding: 1em 0;
+      background: var(--dior-pink);
+      color: var(--dior-rose);
+      padding: 1.5rem;
       text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
     }
-
-    nav {
-      margin-top: 1em;
-    }
-
     nav a {
-      color: white;
+      margin: 0 1rem;
+      color: var(--dior-rose);
       text-decoration: none;
-      padding: 0.5em 1em;
-      margin: 0 0.5em;
-      border-radius: 5px;
-      background-color: #555;
+      font-weight: bold;
     }
-
-    main {
-      padding: 2em;
+    nav a:hover {
+      color: #a86b7a;
     }
-
     .hero {
       text-align: center;
-      margin-bottom: 2em;
+      padding: 3rem 2rem;
+      background: #fbeff2;
     }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    h2 {
+      font-size: 2rem;
+      margin-top: 1.5rem;
+      color: var(--dior-rose);
     }
-
-    .card {
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      padding: 1.5em;
-      margin: 1em;
-      width: 300px;
-      text-align: center;
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 1rem auto;
     }
-
-    .btn {
-      display: inline-block;
-      padding: 0.75em 1.5em;
-      background-color: #007bff;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .backdrop {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      display: none; /* Hidden by default */
-      z-index: 10;  /* Ensure it's above other content */
-    }
-
-    .info-card {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: white;
-      padding: 2em;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      z-index: 11; /* Ensure it's above the backdrop */
-      display: none; /* Hidden by default */
-      min-width: 300px; /* Added a minimum width */
-    }
-
     footer {
       text-align: center;
-      padding: 1em 0;
-      background-color: #333;
-      color: white;
+      padding: 1rem;
+      background: var(--dior-pink);
+      color: var(--dior-rose);
+      font-size: 0.9rem;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%; 
+      height: 2rem;
+      box-sizing: border-box; 
     }
+    #portfolio {
+      padding: 2rem;
+      margin-top: 2rem;
+      background: #fbeff2;
+    }
+    .load-btn {
+      background-color: var(--dior-pink);
+      color: var(--dior-rose);
+      font-size: 1.1rem;
+      padding: 1rem 2rem;
+      border: none;
+      cursor: pointer;
+      margin: 2rem auto;
+      display: block;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .load-btn:hover {
+      background-color: #a86b7a;
+    }
+     .container {
+        padding: 20px;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            }
 
-    /* Show popup when corresponding checkbox is checked */
-    #info1:checked ~ #popup1,
-    #info2:checked ~ #popup2,
-    #info3:checked ~ #popup3,
-    #info4:checked ~ #popup4,
-    #info5:checked ~ #popup5 {
-        display: block;
-    }
-    #info1:checked ~ #backdrop1,
-    #info2:checked ~ #backdrop2,
-    #info3:checked ~ #backdrop3,
-    #info4:checked ~ #backdrop4,
-    #info5:checked ~ #backdrop5{
-        display: block;
-    }
+      .card {
+       background: var(--dior-rose); 
+       color: var(--dior-white);
+       padding: 18px;
+       border-radius: 8px;
+       transition: 0.3s;
 
+            }
+
+      .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 20px rgba(0, 0, 0);
+            }
+
+       .card h3 {
+         margin-top: 0;
+         font-size: 20px;
+         color: black;
+         text-transform: uppercase;
+            }
+
+        .card p {
+                font-size: 14px;
+                color: black;
+            }
+
+         .btn {
+          display: inline-block;
+          padding: 8px 14px;
+          background:var(--dior-white);
+          color: var(--dior-pink);
+          border-radius: 6px;
+          margin-top: 10px;
+          text-decoration: none;
+          cursor: pointer;
+          font-size: 14px;
+          transition: 0.3s;
+
+            }
+
+            .btn:hover {
+                background: #cf91c4;
+                box-shadow: 0 0 10px #b37dab, 0 0 20px #b37dab;
+            }
+
+
+            .backdrop {
+                display: none;
+                position: fixed;
+                inset: 0;
+                background: rgba(0,0,0,0.85);
+                z-index: 900;
+            }
+
+            .info-card {
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 380px;
+                max-width: 90%;
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                z-index: 1000;
+            }
+
+            .info-card h3 {
+                margin-top: 0;
+                font-size: 20px;
+                color: black;
+                text-transform: uppercase;
+            }
+
+            .info-card p {
+                margin: 6px 0;
+                font-size: 14px;
+                color: black;
+            }
+
+
+            #info1:checked ~ #popup1,
+            #info2:checked ~ #popup2,
+            #info3:checked ~ #popup3,
+            #info4:checked ~ #popup4,
+            #info5:checked ~ #backdrop5{
+                display: block;
+            }
+
+            #info1:checked ~ #backdrop1,
+            #info2:checked ~ #backdrop2,
+            #info3:checked ~ #backdrop3,
+            #info4:checked ~ #backdrop4, 
+            #info5:checked ~ #backdrop5{
+                display: block;
+            }
   </style>
 </head>
 <body>
+
   <input type="checkbox" id="info1" hidden>
     <input type="checkbox" id="info2" hidden>
     <input type="checkbox" id="info3" hidden>
     <input type="checkbox" id="info4" hidden>
     <input type="checkbox" id="info5" hidden>
+
   <header>
     <h1>Volunteer Opportunities</h1>
     <nav>
@@ -131,36 +207,48 @@
       <a href="events.html">Events</a>
     </nav>
   </header>
+
   <main>
     <section class="hero">
       <h2>Discover opportunites to help out your community</h2>
   <div class="container">
+
         <div class="card">
             <h3>White Rope Angel Tree Gift Wrapping</h3>
             <p>Help wrap Christmas gifts for Ellicot schools</p>
             <label for="info1" class="btn">Learn More</label>
         </div>
+
+
         <div class="card">
             <h3>Wreathes Across America</h3>
             <p>Honor our veterans by placing wreathes on their gravestones.</p>
             <label for="info2" class="btn">Learn More</label>
         </div>
+
+
         <div class="card">
             <h3>Special Olympics</h3>
             <p>Spend time reading, playing games, or helping with activities.</p>
             <label for="info3" class="btn">Learn More</label>
         </div>
+
          <div class="card">
             <h3>Operation Warm Heart Bell Ringing</h3>
             <p>OWH is an operation that goes into Airmen and Guardian assistance. Ring in the spirit and raise funds for the front range.</p>
             <label for="info5" class="btn">Learn More</label>
         </div>
+
+
         <div class="card">
             <h3>Operation Cosmic Kindness</h3>
             <p>Chopse an angel from the trees and drop off wrapped gifts at the chapel</p>
             <label for="info4" class="btn">Learn More</label>
         </div>
     </div>
+
+
+
             <div class="backdrop" id="backdrop1"></div>
         <div class="info-card" id="popup1">
             <h3>White Rope Angel Tree Gift Wrapping</h3>
@@ -170,6 +258,7 @@
             <p><strong>Sign up link:</strong></p>
             <label for="info1" class="btn">Close</label>
         </div>
+
         <div class="backdrop" id="backdrop2"></div>
         <div class="info-card" id="popup2">
             <h3>Wreathes Across America</h3>
@@ -179,6 +268,7 @@
             <p><strong>Sign up link: https://www.wreathsacrossamerica.org</strong></p>
             <label for="info2" class="btn">Close</label>
         </div>
+
         <div class="backdrop" id="backdrop3"></div>
         <div class="info-card" id="popup3">
             <h3>Special Olympics</h3>
@@ -189,6 +279,7 @@
             <p><strong>Sign up link: https://p2p.onecause.com/25sehealthfair/home </strong></p>
             <label for="info3" class="btn">Close</label>
         </div>
+
         <div class="backdrop" id="backdrop4"></div>
         <div class="info-card" id="popup4">
             <h3>Operation Cosmic Kindness</h3>
@@ -196,6 +287,7 @@
             <p><strong>POC:</strong> CH, CAPT Brian Harris</p>
             <label for="info4" class="btn">Close</label>
         </div>
+
         <div class="backdrop" id="backdrop5"></div>
         <div class="info-card" id="popup5">
             <h3>Operation Warm Heart</h3>
@@ -203,6 +295,7 @@
             <p><strong>POC:</strong> 1st Shirt</p>
             <label for="info5" class="btn">Close</label>
         </div>
+
   <footer>
     <p>&copy; 2025 Thalia Merced </p>
   </footer>
