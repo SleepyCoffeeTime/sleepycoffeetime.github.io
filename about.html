@@ -1,2 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dior at The Met</title>
+  <style>
+    :root {
+      --dior-pink: #d5dcf6;
+      --dior-dark: #1a1a1a;
+      --dior-white: #fcfaff;
+      --dior-rose: #6b7aa8;
+    }
+ body {
+      font-family: 'Georgia', serif;
+      background: var(--dior-white);
+      margin: 0;
+      padding: 0;
+      color: var(--dior-rose);
+      height: 100%;
+      width: 100%;
+    }
+    header {
+      background: var(--dior-pink);
+      color: var(--dior-rose);
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+    }
+    nav a {
+      margin: 0 1rem;
+      color: var(--dior-rose);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #a86b7a;
+    }
+    .hero {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: #fbeff2;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-top: 1.5rem;
+      color: var(--dior-rose);
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 1rem auto;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--dior-pink);
+      color: var(--dior-rose);
+      font-size: 0.9rem;
+     position: relative;
+      z-index: 10;
+      clear: both;
+    }
+    #portfolio {
+      padding: 2rem;
+      margin-top: 2rem;
+      background: #fbeff2;
+    }
+    .load-btn {
+      background-color: var(--dior-pink);
+      color: var(--dior-rose);
+      font-size: 1.1rem;
+      padding: 1rem 2rem;
+      border: none;
+      cursor: pointer;
+      margin: 2rem auto;
+      display: block;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .load-btn:hover {
+      background-color: #a86b7a;
+    }
+     .container {
+        padding: 20px;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            }
 
-<bold> we are soo soo cool </bold>
+      .card {
+       background: var(--dior-rose); 
+       color: var(--dior-white);
+       padding: 18px;
+       border-radius: 8px;
+       transition: 0.3s;
+
+            }
+
+      .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 20px rgba(0, 0, 0);
+            }
+
+       .card h3 {
+         margin-top: 0;
+         font-size: 20px;
+         color: black;
+         text-transform: uppercase;
+            }
+
+        .card p {
+                font-size: 14px;
+                color: black;
+            }
+
+         .btn {
+          display: inline-block;
+          padding: 8px 14px;
+          background:var(--dior-white);
+          color: var(--dior-rose);
+          border-radius: 6px;
+          margin-top: 10px;
+          text-decoration: none;
+          cursor: pointer;
+          font-size: 14px;
+          transition: 0.3s;
+
+            }
+
+            .btn:hover {
+                background: #bbdaf0;
+                box-shadow: 0 0 10px #b37dab, 0 0 20px #b37dab;
+            }
+
+
+            .backdrop {
+                display: none;
+                position: fixed;
+                inset: 0;
+                background: rgba(0,0,0,0.85);
+                z-index: 900;
+            }
+
+            .info-card {
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 380px;
+                max-width: 90%;
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                z-index: 1000;
+            }
+
+            .info-card h3 {
+                margin-top: 0;
+                font-size: 20px;
+                color: black;
+                text-transform: uppercase;
+            }
+
+            .info-card p {
+                margin: 6px 0;
+                font-size: 14px;
+                color: black;
+            }
+
+
+            #info1:checked ~ #popup1,
+            #info2:checked ~ #popup2,
+            #info3:checked ~ #popup3,
+            #info4:checked ~ #popup4,
+            #info5:checked ~ #popup5{
+                display: block;
+            }
+
+            #info1:checked ~ #backdrop1,
+            #info2:checked ~ #backdrop2,
+            #info3:checked ~ #backdrop3,
+            #info4:checked ~ #backdrop4, 
+            #info5:checked ~ #backdrop5{
+                display: block;
+            }
+  </style>
+</head>
+<body>
+
+  <input type="checkbox" id="info1" hidden>
+    <input type="checkbox" id="info2" hidden>
+    <input type="checkbox" id="info3" hidden>
+    <input type="checkbox" id="info4" hidden>
+    <input type="checkbox" id="info5" hidden>
+
+  <header>
+    <h1>Volunteer Opportunities</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About </a>
+      <a href="events.html">Events</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Discover opportunites to help out your community</h2>
+  <div class="container">
+
+     
+    </section>
+  </main>
+
+
+        
+  <footer>
+    <p>&copy; 2025 Thalia Merced </p>
+  </footer>
+</body>
+</html>
